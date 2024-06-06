@@ -13,13 +13,13 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy your application code (excluding templates)
-COPY . .  # This copies everything except the templates folder
+COPY . .  
 
 # Copy templates folder separately
-COPY templates/ .  # This copies the templates folder to /app/templates
+COPY templates/ .  
 
 # Expose any ports your application uses (replace with your port if needed)
 EXPOSE 5000
 
 # Define the default command (assuming app.py is your Flask application entry point)
-CMD [ "python", "app.py" ]  # Replace with your actual entry point script if different
+CMD [ "python", "app.py" ]  
